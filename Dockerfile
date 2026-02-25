@@ -2,7 +2,7 @@
 FROM node:24-alpine AS builder
 
 # 1. 设置 pnpm/npm 全局镜像源环境变量
-ENV NPM_CONFIG_REGISTRY=https://registry.npmmirror.com/
+ENV NPM_CONFIG_REGISTRY=https://mirrors.cloud.tencent.com/npm/
 
 # 2. 【优化】设置环境变量并启用 Corepack
 # 这步不依赖你的项目文件，所以只要 Node 版本不变，这一层永远是缓存命中的！
