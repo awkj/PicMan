@@ -27,7 +27,7 @@ COPY . .
 RUN pnpm build
 
 # --- 第二阶段：构建 Go 后端 ---
-FROM golang:1.24-alpine AS go-builder
+FROM golang:1.26-alpine AS go-builder
 
 WORKDIR /server
 COPY server/go.mod ./
